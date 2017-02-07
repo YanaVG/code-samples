@@ -1,0 +1,143 @@
+@import "conf/vars/colors";
+@import 'conf/vars/common.scss';
+
+.componentContainer {
+  width: 60%;
+  cursor: pointer;
+  height: 70px;
+}
+
+// /* Shape: */
+// background: #1ABC9C;
+// /* Shape: */
+// background: #1ABC9C;
+// /* base: */
+// background: #FFFFFF;
+// /* Rectangle 61: */
+// background: rgba(47,195,199,0.05);
+// box-shadow: 0 2px 4px 0 #D7E1E4, inset 0 2px 0 0 #2FC4C6;
+
+// /* Rectangle 105: */
+// background: #F6F9FD;
+// /* Rectangle 105: */
+// background: #F6F9FD;
+// /* Rectangle 105 Copy 2: */
+// background: #FFFFFF;
+// box-shadow: 0 1px 0 0 rgba(169,155,155,0.20);
+// /* Rectangle 105 Copy 3: */
+// background: #FFFFFF;
+// box-shadow: 0 1px 0 0 rgba(169,155,155,0.20);
+// /* Rectangle 105 Copy 4: */
+// background: #FFFFFF;
+// box-shadow: 0 1px 0 0 rgba(169,155,155,0.20);
+// /* Settings: */
+// font-family: Ubuntu-Light;
+// font-size: 14px;
+// color: #607D8B;
+// letter-spacing: 0.4px;
+// /* INFO: */
+// /* Expert: */
+// font-family: Ubuntu-Medium;
+// font-size: 14px;
+// color: #1DA7AA;
+// letter-spacing: 0.4px;
+// /* Startup: */
+// font-family: Ubuntu-Light;
+// font-size: 14px;
+// color: #607D8B;
+// letter-spacing: 0.4px;
+// /* Log out Copy 3: */
+// font-family: Ubuntu-Light;
+// font-size: 14px;
+// color: #607D8B;
+// letter-spacing: 0.4px;
+// /* INFO Copy: */
+// /* icn_done_green copy: */
+// /* Oval 49 Copy: */
+// opacity: 0.8;
+// border: 2px solid #CFD8DC;
+
+.previewDropdownContainer {
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  border-top: 2px solid transparent;
+  transition: all ease-in 100ms;
+  &.previewDropdownExpanded {
+    border-top-color: #2FC4C6;
+    background-color: rgba(47,195,199,0.05);
+    box-shadow: 0 2px 4px 0 #D7E1E4, inset 0 2px 0 0 #2FC4C6;
+  }
+}
+.userAvatar {
+  margin-right: 10px;
+}
+
+.userName {
+  max-width: calc(100% - 60px);
+  margin: 0;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: lighter;
+  text-align: center;
+}
+.expandButton {
+  height: 18px;
+  color: $very-light-grey-color;
+}
+
+.dropdownContainer {
+  display: flex;
+  flex-flow: nowrap column;
+  align-items: flex-start;
+  position: absolute;
+  background-color: #fff;
+  z-index: 1;
+  box-shadow: $shadowBackground;
+  top: 70px;
+  width: 156px;
+  padding: 0;
+  .dropdownListContainer {
+    padding: 0;
+    .listItem {
+      box-shadow: 0 1px 0 0 rgba(169,155,155,0.20);
+      span {
+        font-size: 14px;
+        color: #607D8B;
+      }
+      &:hover {
+        background: #F6F9FD;  
+      }
+    }
+  }
+  .item {
+    width: 100%;
+    list-style: none;
+    user-select: none;
+    padding: 0 40px 0 42px;
+    cursor: pointer;
+  }
+
+  .listItem {
+    padding: 0 0 0 0;
+  }
+
+  .itemText {
+    // font-size: 1.2rem;
+    width: 100%;
+  }
+
+  .active {
+    background-color: $color-light-grey;
+  }
+}
+.roleActive {
+  background-color: red;
+}
+
+

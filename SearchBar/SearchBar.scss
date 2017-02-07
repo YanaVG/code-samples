@@ -1,0 +1,20 @@
+@import 'conf/vars/common.scss';
+@import 'conf/vars/colors.scss';
+
+
+.mainContainer {
+  padding: 10px;
+  display: flex;
+  flex-flow: nowrap column;
+  position: relative;
+  outline: none;
+  background-color: $grey-app-bg;
+}
+.mainContainerActive {
+  box-shadow: $shadowBackground;
+  background-color: $white-color;
+}
+.expandedList {
+  position: absolute;
+  top:100%;
+}

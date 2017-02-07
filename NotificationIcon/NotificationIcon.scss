@@ -1,0 +1,24 @@
+@import "conf/vars/colors";
+
+.notificationContainer {
+  display: flex;
+  flex-flow: nowrap row;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+
+  &:hover > .notificationIcon,
+  &:hover > .notificationValue {
+    color: $color-dark-green;
+  }
+}
+.notificationIcon {
+  margin-right: 5px;
+  font-size: 2rem;
+  color: $color-grey-heading;
+}
+.notificationValue {
+  margin: 0;
+  color: $color-grey-heading;
+  font-weight: lighter;
+}

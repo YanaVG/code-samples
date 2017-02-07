@@ -1,0 +1,38 @@
+@import 'conf/vars/colors.scss';
+
+.mainContainer {
+  width: 100%;
+  display: flex;
+  flex-flow: nowrap row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.searchIcon {
+  margin-right: 15px;
+  font-size: 20px;
+  color: $dark-gery-text-color;
+}
+.searchIconActive {
+  color: $color-background-light-blue;
+}
+.searchInput {
+  width: calc(100% - 64px);
+  text-align: left;
+  outline: none;
+  border: none;
+  font-weight: lighter;
+  font-size: 1.35rem;
+  color: $dark-gery-text-color;
+  background-color: $grey-app-bg;
+
+  &::-webkit-input-placeholder {
+    color: $grey-text-color;
+  }
+}
+.searchInputActive {
+  background-color: $white-color;
+}
+.expandIcon {
+  margin-left: 10px;
+  color: $very-light-grey-color;
+}
