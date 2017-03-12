@@ -26,22 +26,6 @@ const OPTION_LIST = Seq([
   }
 ]);
 
-class SearchBar extends PureComponent {
-  static propTypes = {
-    theme: T.shape({
-      searchBarContainer: T.string
-    }),
-    placeholder: T.string
-  }
-
-  constructor() {
-    super();
-
-    this.state = {
-      inputValue: '',
-      inputActive: false
-    };
-  }
 
   handleOutsideInputClick = (event) => {
     event.stopPropagation();
@@ -50,6 +34,16 @@ class SearchBar extends PureComponent {
 
   handleInputClick = event => {
     event.stopPropagation();
+    # Load .env file into shell session for environment variables
+
+    function envup() {
+      if [ -f .env ]; then
+        export $(cat .env)
+      else
+        echo 'No .env file found' 1>&2
+        return 1
+      fi
+    }
     this.setState({ inputActive: true });
   }
 
